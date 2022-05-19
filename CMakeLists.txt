@@ -6,12 +6,12 @@ set(NDK_DIR /Users/fylder/Library/Android/sdk/ndk/24.0.8215888) # 23.1.7779620  
 set(CMAKE_SYSTEM_NAME Android)
 set(CMAKE_SYSTEM_VERSION 21)
 # set(CMAKE_ANDROID_ARCH_ABI armeabi-v7a)
-set(CMAKE_ANDROID_ARCH_ABI arm64-v8a) #ndk版本低,ABI设置可能不生效
-#set(CMAKE_ANDROID_ARCH_ABI x86_64)
-#set(CMAKE_ANDROID_ARCH_ABI x86)
+# set(CMAKE_ANDROID_ARCH_ABI arm64-v8a) #ndk版本低,ABI设置可能不生效
+# set(CMAKE_ANDROID_ARCH_ABI x86_64)
+# set(CMAKE_ANDROID_ARCH_ABI x86)
 set(CMAKE_ANDROID_NDK ${NDK_DIR})
 set(CMAKE_TOOLCHAIN_FILE ${NDK_DIR}/build/cmake/android.toolchain.cmake)
-set(CMAKE_ANDROID_STL_TYPE c++_shared)
+set(CMAKE_ANDROID_STL_TYPE c++_static)
 set(CMAKE_BUILD_TYPE DEBUG) #指定生成的版本。RELEASE
 set(CMAKE_CXX_STANDARD 17) #c++标准
 set(CMAKE_CXX_FLAGS_DEBUG "-std=c++17 -frtti -fexceptions") #指定编译选项
