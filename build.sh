@@ -1,4 +1,3 @@
-
 function build_so
 {
   # 移除缓存CMakeCache,让cmake配置生效
@@ -8,6 +7,7 @@ function build_so
   make
   echo "build $AHH_ABI so finish\n"
 }
+
 
 rm -rf outputs
 mkdir build
@@ -29,21 +29,18 @@ build_so
 AHH_ABI=x86_64
 build_so
 
-
 echo "build finish\n"
 
 cd ../outputs
-if [ -f "jinLibs/armeabi-v7a/libahh.so" ]; then
-  file jinLibs/armeabi-v7a/libahh.so
+if [ -f "jniLibs/armeabi-v7a/libgusha.so" ]; then
+  file jniLibs/armeabi-v7a/libgusha.so
 fi
-
-if [ -f "jinLibs/arm64-v8a/libahh.so" ]; then
-  file jinLibs/arm64-v8a/libahh.so
+if [ -f "jniLibs/arm64-v8a/libgusha.so" ]; then
+  file jniLibs/arm64-v8a/libgusha.so
 fi
-
-if [ -f "jinLibs/x86/libahh.so" ]; then
-  file jinLibs/x86/libahh.so
+if [ -f "jniLibs/x86/libgusha.so" ]; then
+  file jniLibs/x86/libgusha.so
 fi
-if [ -f "jinLibs/x86_64/libahh.so" ]; then
-  file jinLibs/x86_64/libahh.so
+if [ -f "jniLibs/x86_64/libgusha.so" ]; then
+  file jniLibs/x86_64/libgusha.so
 fi

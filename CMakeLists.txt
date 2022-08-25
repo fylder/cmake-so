@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-set(NDK_DIR /Users/fylder/Library/Android/sdk/ndk/24.0.8215888) # 23.1.7779620    21.0.6113669    24.0.8215888
+set(NDK_DIR /Users/fylder/Library/Android/sdk/ndk/23.1.7779620) # 23.1.7779620  24.0.8215888  21.0.6113669(不适用)  25.1.8937393(不适用)
 
 ## 初始配置要在project之前
 set(CMAKE_SYSTEM_NAME Android)
@@ -18,10 +18,10 @@ set(CMAKE_CXX_FLAGS_DEBUG "-std=c++17 -frtti -fexceptions") #指定编译选项
 set(ANDROID_PLATFORM android-21)
 
 
-project(ahh)
+project(gusha)
 
 # 最后设置编译文件要在project之后,否则找不到文件路径/outputs/
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/outputs/jinLibs/${CMAKE_ANDROID_ARCH_ABI})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/outputs/jniLibs/${CMAKE_ANDROID_ARCH_ABI})
 
 aux_source_directory(./src SRC_LIST)
 
